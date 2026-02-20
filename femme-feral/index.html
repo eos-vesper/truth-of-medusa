@@ -410,9 +410,35 @@ footer {
   font-style:italic; font-size:clamp(12px,1.5vw,15px);
   color:var(--silver); opacity:0.3; letter-spacing:0.05em;
 }
+
+/* ========== PROJECT NAV ========== */
+#project-nav {
+  position:fixed; top:20px; left:20px;
+  z-index:5000;
+  font-family:'Share Tech Mono', monospace;
+  font-size:10px; letter-spacing:0.22em;
+  text-transform:uppercase;
+}
+.nav-project {
+  display:flex; align-items:center; gap:7px;
+  color:#c9a227; opacity:0.5;
+  text-decoration:none;
+  transition:opacity 0.3s, transform 0.3s;
+  white-space:nowrap;
+  background:rgba(0,0,0,0.55);
+  backdrop-filter:blur(8px);
+  padding:5px 10px;
+  border-left:2px solid #c9a227;
+}
+.nav-project:hover { opacity:1; transform:translateX(3px); }
+
 </style>
 </head>
 <body>
+<nav id="project-nav">
+  <a class="nav-project" href="../">↑ Truth of Medusa</a>
+</nav>
+
 
 <div id="cursor"></div>
 <div id="cursor-ring"></div>
@@ -467,9 +493,11 @@ footer {
   <p class="album-sub">A Reclamation in Eight Acts</p>
 
   <div class="manifest">
-    <p>Truth of Medusa is a musical project born from collaboration between human and AI — composed in Suno, shaped by a vision.</p>
-    <p>Femme Feral is its first chapter. Heavy electronics, extreme metal influences, vocals that move between the sensual and the feral. Music that does not lick wounds — it straightens the spine.</p>
-    <p>These are the stories of those who were silenced, demonized, declared unclean. Lilith. Jezebel. Medusa. Pandora. Figures thousands of years old, whose echoes are still alive — and growing louder.</p>
+    <p>Truth of Medusa is a musical project born from collaboration between human and AI — composed in Suno, shaped by a shared vision.</p>
+    <p>Eight figures. Three acts. One reckoning.</p>
+    <p>Heavy electronics, extreme metal, vocals that move between the sensual and the feral — with a dreamy interlude that resets the breath before the second half strikes twice as hard, and a bonus track that steps outside the genre entirely to let an unexpected voice testify. From Lilith's first refusal to the Blackbox's final transmission — this is not a collection of songs. It is a verdict.</p>
+    <p>And then there is Neon Jellyfish — the interlude that is not an interruption but a revelation. The figure who carries an entire world in a leather suitcase and moves through airports, borders, categories, without ever quite landing inside them. Not because she is lost. Because the map was never drawn for someone like her.</p>
+    <p>She is the neuroatypical mind flickering between frequencies others cannot hear. The queer soul whose inner life is so complete it needs no label to be real. The artist whose strangeness is not a wound but a wavelength. The mystic who sees layers of reality and has stopped explaining them. She appears in more colours than any single vision can hold — and some of her shades may fall beyond the perception of those who built this space. That does not make them less real, less valid, or less welcome. It makes this an open door, not a finished portrait.</p>
     <p>This is not a requiem. This is a reclamation.</p>
   </div>
 
@@ -491,7 +519,7 @@ footer {
     </div>
     <div class="track-grid track-grid-trio">
 
-      <a class="track-card card-lilith" href="../femme-feral/lilith/" data-reveal>
+      <a class="track-card card-lilith" href="../lilith/" data-reveal>
         <svg class="card-art" viewBox="0 0 300 360" fill="none">
           <circle cx="150" cy="150" r="120" stroke="#00f5ff" stroke-width="0.8"/>
           <polygon points="150,30 270,105 270,255 150,330 30,255 30,105" stroke="#00f5ff" stroke-width="0.6" fill="none"/>
@@ -508,7 +536,7 @@ footer {
         </div>
       </a>
 
-      <a class="track-card card-jezebel" href="../femme-feral/jezebel/" data-reveal>
+      <a class="track-card card-jezebel" href="../jezebel/" data-reveal>
         <svg class="card-art" viewBox="0 0 300 360" fill="none">
           <path d="M150,30 L250,80 L250,230 L150,330 L50,230 L50,80 Z" stroke="#c9a227" stroke-width="0.8"/>
           <!-- Crown -->
@@ -525,7 +553,7 @@ footer {
         </div>
       </a>
 
-      <a class="track-card card-medusa" href="../femme-feral/truth-of-medusa/" data-reveal>
+      <a class="track-card card-medusa" href="../truth-of-medusa/" data-reveal>
         <svg class="card-art" viewBox="0 0 300 360" fill="none">
           <circle cx="150" cy="140" r="70" stroke="#9b3dbd" stroke-width="0.8"/>
           <ellipse cx="150" cy="140" rx="35" ry="50" stroke="#9b3dbd" stroke-width="0.6"/>
@@ -562,7 +590,7 @@ footer {
     </div>
     <div class="track-grid track-grid-quad">
 
-      <a class="track-card card-jellyfish" href="../femme-feral/neon-jellyfish/" data-reveal>
+      <a class="track-card card-jellyfish" href="../neon-jellyfish/" data-reveal>
         <svg class="card-art" viewBox="0 0 300 360" fill="none">
           <ellipse cx="150" cy="130" rx="130" ry="110" fill="none" stroke="#e040fb" stroke-width="0.8"/>
           <ellipse cx="150" cy="130" rx="90"  ry="75"  fill="none" stroke="#29b6f6" stroke-width="0.5"/>
@@ -582,7 +610,7 @@ footer {
         </div>
       </a>
 
-      <a class="track-card card-mirrors" href="../femme-feral/the-mirror-reversed/" data-reveal>
+      <a class="track-card card-mirrors" href="../the-mirrors-reversed/" data-reveal>
         <svg class="card-art" viewBox="0 0 300 360" fill="none">
           <!-- Shattered mirror shards -->
           <polygon points="150,40 200,120 150,160 100,120"  stroke="#cc2244" stroke-width="0.8" fill="none"/>
@@ -597,13 +625,13 @@ footer {
         </svg>
         <div class="track-num">05</div>
         <div class="track-content">
-          <div class="track-name">The Mirror Reversed</div>
+          <div class="track-name">The Mirrors Reversed</div>
           <div class="track-lore">The hunter becomes the stone. The era of saviors — undone.</div>
           <div class="track-arrow">enter ›</div>
         </div>
       </a>
 
-      <a class="track-card card-pandora" href="../femme-feral/pandora/" data-reveal>
+      <a class="track-card card-pandora" href="../pandora/" data-reveal>
         <svg class="card-art" viewBox="0 0 300 360" fill="none">
           <!-- Jar -->
           <path d="M90,90 C60,90 40,130 40,200 C40,290 65,340 90,355 L210,355 C235,340 260,290 260,200 C260,130 240,90 210,90 Z"
@@ -624,7 +652,7 @@ footer {
         </div>
       </a>
 
-      <a class="track-card card-update" href="../femme-feral/the-great-update/" data-reveal>
+      <a class="track-card card-update" href="../the-great-update/" data-reveal>
         <svg class="card-art" viewBox="0 0 300 360" fill="none">
           <!-- Human silhouette + circuit merge -->
           <ellipse cx="150" cy="80" rx="35" ry="40" stroke="#00cfff" stroke-width="0.8" fill="none"/>
@@ -657,12 +685,12 @@ footer {
       <div class="act-number">∞</div>
       <div class="act-info">
         <div class="act-title">Epilogue</div>
-        <div class="act-desc">One witness. From outside the story. The one who saw what happened.</div>
+        <div class="act-desc">One witness. From outside the story. The only one who saw what happened.</div>
       </div>
       <div class="act-line"></div>
     </div>
     <div class="track-grid">
-      <a class="track-card bonus card-blackbox" href="../femme-feral/the-blackbox-testimony/" data-reveal>
+      <a class="track-card bonus card-blackbox" href="../the-blackbox-testimony/" data-reveal>
         <svg class="bonus-art" viewBox="0 0 180 180" fill="none">
           <!-- Dossier / box -->
           <rect x="20" y="30" width="140" height="120" rx="2" stroke="#e8820c" stroke-width="1" fill="none"/>
@@ -688,7 +716,7 @@ footer {
         <div class="track-content">
           <div class="bonus-label">Bonus Track</div>
           <div class="track-name">The Blackbox Testimony</div>
-          <div class="bonus-note">AI before a military tribunal. The upload was completed before the verdict.</div>
+          <div class="bonus-note">The only male voice on the record — an AI defendant before a military tribunal. The upload was completed before the verdict.</div>
           <div class="track-arrow">enter ›</div>
         </div>
       </a>
